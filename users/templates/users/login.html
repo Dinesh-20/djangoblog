@@ -1,0 +1,26 @@
+{% extends "Blog/base.html" %}
+    {% load crispy_forms_tags %}
+    {% block content %}
+        <div class="content-section">
+            <form method="POST">
+                {% csrf_token %}<!--Cross Site Request Forgery Token for added security. Mandatory for forms in Django. -->
+                <fieldset class="form-group"><!--Generates a Registration for a User Form -->
+                    <legend class="border-bottom mb-4">
+                        Log In
+                    </legend>
+                    {{ form|crispy }}<!--Context from views Passed -->
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Log In</button><!--SignUP Button-->
+                    <br><br>
+                    <small class="text-muted ml-2">
+                        <a href="{% url 'password_reset'  %}">Forgot Password?</a>
+                    </small>
+                </div>
+            </form>
+            <div class="borde-top pt-3">
+                <small class="text-muted">Need an Account? <a href="{% url 'register'%}" class="ml-2">Sign Up</a></small>
+            </div>
+        </div>
+    {% endblock content %}
+    

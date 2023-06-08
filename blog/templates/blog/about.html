@@ -1,0 +1,11 @@
+{% extends "Blog/base.html" %}
+<!--This is called inheritance. This causes all the non-unique data to be copied automatically -->
+
+
+<!--Block is used to identify the unique data in each page that is to be over-ridden by the child template.
+    The block content of base.html will be over-ridden with block content of about.html 
+    Similarly block title. block image , block paragraph may also be used-->
+    {% block content %}
+        <h1>About Page</h1>
+    {% endblock content %}
+    

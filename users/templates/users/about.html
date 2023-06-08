@@ -1,0 +1,27 @@
+<!--{% extends "Blog/base.html" %}-->
+<!--    {% load crispy_forms_tags %}-->
+<!--    {% block content %}-->
+<!--      <div class="content-section">-->
+<!--          <div class="media">-->
+<!--            <div class="media-body">-->
+<!--&lt;!&ndash;                <h2 class="account-heading">{{ user.username }}'s Details</h2>&ndash;&gt;-->
+<!--                <form method="POST" enctype="multipart/form-data">&lt;!&ndash;To ensure data like image is sent back having correct encoding type&ndash;&gt;-->
+<!--                    {% csrf_token %}&lt;!&ndash;Cross Site Request Forgery Token for added security. Mandatory for forms in Django. &ndash;&gt;-->
+<!--                    <fieldset class="form-group">&lt;!&ndash;Generates a Registration for a User Form &ndash;&gt;-->
+<!--                    <legend class="border-bottom mb-4">-->
+<!--                        <h2> {{user.username}}'s Details  </h2>-->
+<!--                    </legend>-->
+<!--                        {{ form|crispy }}  &lt;!&ndash;Context from views Passed &ndash;&gt;-->
+<!--                    </fieldset>-->
+<!--                    <p class="text-secondary">{{ user.first_Name }}</p>-->
+<!--                    <p class="text-secondary">{{ user.last_Name }}</p>-->
+<!--                    <p class="text-secondary">{{ user.Hobbies }}</p>-->
+<!--                    <p class="text-secondary">{{ user.Interest }}</p>-->
+<!--                    <p class="text-secondary">{{ user.Power }}</p>-->
+<!--                    <p class="text-secondary">{{ user.City }}</p>-->
+<!--                    <button class="btn btn-outline-info" type="submit">Update </button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--    {% endblock content %}-->
